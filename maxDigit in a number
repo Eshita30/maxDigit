@@ -1,0 +1,21 @@
+import java.util.*;
+import java.util.Scanner;
+public class Main{
+    public static void main (String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int input=sc.nextInt();
+        int itemId=maxDigit(input);
+        System.out.println(itemId);
+    }
+    static int maxDigit(int num){
+        int max=0;
+        while(num>0){
+            int d=num%10;
+            if(d>max){
+                max=d;
+            }
+        num/=10;    
+        }return max;
+    }
+}
